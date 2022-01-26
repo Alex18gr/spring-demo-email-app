@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Hello from:</h2>
+
+<ul>
+    <li th:each="organizer: ${organizers}" th:text="${organizer}"></li>
+</ul>
+
+<div th:if="${showGuests and not #lists.isEmpty(guests)}">
+
+    <h2>We have the following guests</h2>
+
+    <ol>
+        <li th:each="guest: ${guests}" th:text="${guest}"></li>
+    </ol>
+
+</div>
+
+<p>
+    The party is going to take plate on <span th:text="${#dates.format(#dates.createNow(), 'dd-MM')}"></span> at <span th:text="${place}"></span>.
+</p>
+
+</body>
+</html>
