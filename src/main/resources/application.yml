@@ -1,1 +1,22 @@
-
+spring:
+  datasource:
+    url:
+    username:
+    password:
+    driverClassName:
+  jpa:
+    hibernate:
+      ddl-auto: update
+  mail:
+    host: ''
+    port: 587
+    username: ''
+    password: ''
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+          port: 587
